@@ -30,7 +30,8 @@ const searchMovies = () => {
   });
 };
 
-const displayMovie = (selector, title, year, poster) => {  selector.innerHTML += `
+const displayMovie = (selector, title, year, poster) => {
+  selector.innerHTML += `
     <div class="card flex-row flex-wrap align-items-center my-5" style="height: 200px">
       <img src=${poster} class="rounded" alt="" style="height: 180px; margin-left: 12px">
       <div class="card-block px-2">
