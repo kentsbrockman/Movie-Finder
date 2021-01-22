@@ -1,6 +1,7 @@
 let selector = document.getElementById("displaymovies");
 
-const searchMovies = () => {
+const searchMovies = (event) => {
+  event.preventDefault();
   let inputSearch = document.getElementById("findmovie").value;
   let dataMovies = `https://www.omdbapi.com/?apikey=${omdbKey}&s=${inputSearch}`;
   console.log(dataMovies);

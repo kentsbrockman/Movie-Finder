@@ -33,11 +33,13 @@
       
       <hr class="my-4">
 
-      <div class="d-flex align-items-baseline">
-        <input type="text" id="findmovie" class="form-control mb-2 rounded-pill" placeholder="Hunger Games" style="margin-right: -1.8rem !important">
-        <i class="fas fa-search" style="opacity: 0.6;"></i>
-      </div>
-      <button class="btn btn-primary rounded-pill my-2" onclick="searchMovies()">Submit &nbsp &#10140</button>
+      <form onsubmit="searchMovies(event)">
+        <div class="d-flex align-items-baseline">
+          <input type="text" id="findmovie" class="form-control mb-2 rounded-pill" placeholder="Hunger Games" style="margin-right: -1.8rem !important">
+          <i class="fas fa-search" style="opacity: 0.6;"></i>
+        </div>
+        <button class="btn btn-primary rounded-pill my-2">Submit &nbsp &#10140</button>
+      </form>
     </div>
 
     <div class="container" id="displaymovies"></div>
