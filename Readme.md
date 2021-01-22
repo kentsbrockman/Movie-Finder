@@ -1,11 +1,15 @@
-# Video searcher
+# FILMFINDER
 
-Petit projet pour la formation THP Next, pour la semaine sur JS.
+Voici un projet court pour la formation THP Next : une interface de recherche de films basée sur des appels API passés au service ["The Open Movie Database"](http://www.omdbapi.com/).
 
-## ---
+---
 
-Les articles / vidéos / formations se trouvent dans le fichier `data.js`.
+## Mise en place
 
-Dans le fichier `index.html` se trouve le template HTML initial à utiliser.
+- Cloner / télécharger le repo.
+- Dans le dossier racine, créer un fichier "apikey.js".
+- Dans ce fichier, saisir `const omdbKey="[Votre clef d'API omdb]"`.
 
-Quelques fonctions sont déjà présentes dans le fichier `index.js`, il ne reste plus qu'à terminer certaines fonctions contenant des TODOs&nbsp;!
+---
+
+Enjoy !

@@ -6,3 +6,15 @@ h1,h2,h3,h4,h5,h6 {
   font-family: "Oswald";
 }
 
+.film {
+  transform: translateX(0);
+  opacity: 1;
+  transition: transform 0.6s, opacity 0.4s;
+}
+
+.film.not-visible {
+  transform: translateX(-80px);
+  opacity: 0;
+}
+
+
