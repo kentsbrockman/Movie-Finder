@@ -7,29 +7,33 @@ const searchMovies = (event) => {
   console.log(dataMovies);
   fetch(dataMovies)
     .then(response => response.json())
-    .then(response => {
-      console.log(response);
-      return response;
-    })
-    .then(response => {
+    //If response.status == 404 ? ==> No movie found
+    .then(data => {
       selector.innerHTML = "";
-      response.Search.forEach(response => {
-        displayMovie(
-          selector,
-          response.Title,
-          response.Year,
-          response.Poster,
-        );
-      });
+      //If data.Search && data.Search.length > 0
+        data.Search.forEach(item => {
+          displayMovie(
+            selector,
+            item.Title,
+            item.Year,
+            item.Poster,
+          );
+        });
+      //Return
+      //selector.innerHTML += `
+      //<div class="text-center mt-5">
+      //  <b>No movie has been found unfortunately 😢<br>Give it another try with a valid title!</b>
+      //</div>`;
     })
     .then(() => look())
-  .catch((error) => {
+  .catch(error => {
     console.error(error);
     selector.innerHTML += `
       <div class="text-center mt-5">
-        <b>No movie has been found unfortunately 😢<br>Give it another try with a valid title!</b>
+        <b>UNEXPECTED --- No movie has been found unfortunately 😢<br>Give it another try with a valid title!</b>
       </div>`;
   });
+
 };
 
 const displayMovie = (selector, title, year, poster) => {
