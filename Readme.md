@@ -6,7 +6,7 @@ Here is a short project carried out during [The Hacking Project](https://www.the
 
 ## Setup
 
-- Get your personal API key from ["The Open Movie Database"](http://www.omdbapi.com/)
+- Get your personal API key from ["The Open Movie Database"](http://www.omdbapi.com/).
 - Download or clone this repository.
 - In the root folder, create a file named "apikey.js".
 - In this file, type `const omdbKey="[Your omdb API key]"`.
